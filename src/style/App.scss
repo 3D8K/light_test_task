@@ -27,14 +27,27 @@
     // .card__inside-wrapper
     position: relative;
     display: flex;
+    flex-direction: column;
     max-width: 290px;
     max-height: 497px;
     align-items: center;
     justify-content: center;
-    padding: 5px;
+    padding: 3px;
     border-radius: 24px;
     opacity: 0.99;
     overflow: hidden;
+    clip-path: polygon(
+        0% 0%,
+        100% 0%,
+        99.94% 82.02%,
+        97.57% 83.11%,
+        100.29% 84.28%,
+        100% 100%,
+        0px 100%,
+        -0.41% 84.28%,
+        2.43% 83.11%,
+        -0.06% 82.02%
+    );
     &__inside-wrapper {
         box-sizing: border-box;
         width: 278px;
@@ -47,6 +60,12 @@
         background-position: center;
         background-repeat: no-repeat;
         text-align: center;
+    }
+
+    &__footer-background {
+        height: 76px;
+        display: flex;
+        background: #3363ff;
     }
 
     &::before {
